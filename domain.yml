@@ -1,0 +1,173 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - thanks
+  - help_bot
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - give_courses
+  - give_categories
+  - give_dsa_courses
+  - give_pts_courses
+  - give_pl_courses
+  - give_wd_courses
+  - give_ml_courses
+  - give_school_courses
+  - give_gate_courses
+  - give_free_courses
+  - give_paid_courses
+  - give_paced_courses
+  - give_live_courses
+  - select_course
+  - ask_pace
+  - ask_price
+  - ask_duration
+  - ask_mentor
+  - ask_overview
+  - ask_online
+  - ask_doubt_support
+  - ask_rating
+  - ask_testimonials
+  - ask_kind
+  - ask_description
+  - ask_certificate
+  - ask_difficulty
+  - ask_aid
+  - ask_ninety
+  - ask_pre
+  - ask_link
+  - ask_feedback
+
+entities:
+  - course_no
+
+slots:
+  course_no:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: course_no
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_help_bot:
+    - text: "I am here to assist you to buy the course you are looking for \n\n
+    Things you can ask the bot \n
+    1. Show all the available courses \n
+    2. Show different categories of courses \n
+    3. Show the available courses by category like -  \n
+    \tDSA \n
+    \tMachine Learning \n
+    \tData Science \n
+    \tWeb Development \n
+    \tSchool \n
+    \tGATE \n
+    \tProgramming \n
+    \tFree \n
+    \tPaid \n
+    \tSelf-paced \n
+    \tLive \n
+    4. Select a course you want to enquire about by specifying the course number \n
+    5. Ask questions about the selected course like - \n
+    \tDescription \n
+    \tPace \n
+    \tPrice \n
+    \tRating \n
+    \tTestimonials \n
+    \tCourse Link \n
+    \tFinancial aid \n
+    \tPre-requisites \n
+    \tOverview \n
+    \tCertification \n
+    \tDoubt support \n
+    \tInstructor/mentor details \n
+    \tDuration
+    "
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_online:
+  - text: "It is an online course. You can check out our offline classroom courses at https://www.geeksforgeeks.org/courses/offline-courses "
+
+  utter_feedback:
+  - text: "We would love to take your feedback. Please proceed!"
+
+  utter_certificate:
+  - text: "Once the course is completed. You'll be getting a course completion certificate.\n \nPerks of our certificates:
+
+ - Credible Validation\n
+- Continuous Relevance\n
+- Helps in Career Advancement\n
+- Lifetime Validity"
+
+  utter_ninety:
+  - text: "To qualify for the refund you must complete 90% of the course content within 90 days from the date of purchase. The content you have to cover in each section of the course is as follows:\n
+
+
+
+Chapter & Practice: 90% including Videos, Articles, Problems and Quiz \n
+
+Contest: You need to solve at least 90% of the Contests \n
+
+Secure the Course certificate by achieving the cut-off Scores \n"
+
+  utter_welcome:
+  - text: "You are very welcome!"
+
+
+actions:
+  - action_give_courses
+  - action_give_categories
+  - action_give_dsa_courses
+  - action_give_pts_courses
+  - action_give_pl_courses
+  - action_give_wd_courses
+  - action_give_ml_courses
+  - action_give_school_courses
+  - action_give_gate_courses
+  - action_give_free_courses
+  - action_give_paid_courses
+  - action_give_paced_courses
+  - action_give_live_courses
+  - action_select_courses
+  - action_ask_pace
+  - action_ask_price
+  - action_ask_duration
+  - action_ask_mentor
+  - action_ask_overview
+  - action_ask_doubt_support
+  - action_ask_rating
+  - action_ask_testimonials
+  - action_ask_kind
+  - action_ask_description
+  - action_ask_difficulty
+  - action_ask_aid
+  - action_ask_pre
+  - action_ask_link
+  - action_export_chat_data
+  - action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

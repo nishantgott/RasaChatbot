@@ -1,0 +1,209 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: list all courses
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_courses
+  - action: action_give_courses
+
+- story: list all courses
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_categories
+  - action: action_give_categories
+
+- story: list dsa courses
+  steps:
+  - intent: give_dsa_courses
+  - action: action_give_dsa_courses
+
+- story: list pts courses
+  steps:
+  - intent: give_pts_courses
+  - action: action_give_pts_courses
+
+- story: list pl courses
+  steps:
+  - intent: give_pl_courses
+  - action: action_give_pl_courses
+
+- story: list wd courses
+  steps:
+  - intent: give_wd_courses
+  - action: action_give_wd_courses
+
+- story: list ml courses
+  steps:
+  - intent: give_ml_courses
+  - action: action_give_ml_courses
+
+- story: list school courses
+  steps:
+  - intent: give_school_courses
+  - action: action_give_school_courses
+
+- story: list gate courses
+  steps:
+    - intent: give_gate_courses
+    - action: action_give_gate_courses
+
+- story: list free courses
+  steps:
+    - intent: give_free_courses
+    - action: action_give_free_courses
+
+- story: list paid courses
+  steps:
+    - intent: give_paid_courses
+    - action: action_give_paid_courses
+
+- story: list self paced courses
+  steps:
+    - intent: give_paced_courses
+    - action: action_give_paced_courses
+
+- story: list live courses
+  steps:
+    - intent: give_live_courses
+    - action: action_give_live_courses
+
+- story: select the course
+  steps:
+    - intent: select_course
+    - action: action_select_courses
+
+
+- story: what is the pace of the course
+  steps:
+    - intent: ask_pace
+    - action: action_ask_pace
+
+
+- story: what is the price of the course
+  steps:
+    - intent: ask_price
+    - action: action_ask_price
+
+- story: what is the duration of the course
+  steps:
+    - intent: ask_duration
+    - action: action_ask_duration
+
+- story: who is the mentor of the course
+  steps:
+    - intent: ask_mentor
+    - action: action_ask_mentor
+
+
+- story: what is the overview of the course
+  steps:
+    - intent: ask_overview
+    - action: action_ask_overview
+
+- story: is this course online or offline
+  steps:
+    - intent: ask_online
+    - action: utter_online
+
+- story: does this course have doubt support
+  steps:
+    - intent: ask_doubt_support
+    - action: action_ask_doubt_support
+
+- story: rating of the course
+  steps:
+    - intent: ask_rating
+    - action: action_ask_rating
+
+- story: testimonials of the course
+  steps:
+    - intent: ask_testimonials
+    - action: action_ask_testimonials
+
+- story: kind of the course
+  steps:
+    - intent: ask_kind
+    - action: action_ask_kind
+
+- story: description of the course
+  steps:
+    - intent: ask_description
+    - action: action_ask_description
+
+- story: certification of the course
+  steps:
+    - intent: ask_certificate
+    - action: utter_certificate
+
+- story: difficulty of the course
+  steps:
+    - intent: ask_difficulty
+    - action: action_ask_difficulty
+
+- story: aid for the course
+  steps:
+    - intent: ask_aid
+    - action: action_ask_aid
+
+- story: what is 90 days challenge
+  steps:
+    - intent: ask_ninety
+    - action: utter_ninety
+
+- story: what are the pre-requisites
+  steps:
+    - intent: ask_pre
+    - action: action_ask_pre
+
+- story: what is the link
+  steps:
+    - intent: ask_link
+    - action: action_ask_link
+
+- story: thanks
+  steps:
+    - intent: thanks
+    - action: utter_welcome
+    - action: action_export_chat_data
+
+- story: fallback
+  steps:
+    - intent: nlu_fallback
+    - action: action_default_fallback
+
+- story: help
+  steps:
+    - intent: help_bot
+    - action: utter_help_bot
+
